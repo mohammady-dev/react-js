@@ -1,0 +1,46 @@
+
+<section>
+	Exercise 4
+</section>
+
+<section>
+	<input class="input-t" type="text" onkeyup="mirrorNumber()">
+	<br>
+	<br>
+	<br>
+	<h2>خروجی</h2>
+	<p id="answer-m7"></p>
+</section>
+
+
+<script>
+
+	
+			
+
+	function mirrorNumber(number){
+
+		var number = document.querySelector('.input-t').value;
+		
+
+
+		var a = 0;
+		var s = 0;
+
+		while (number>0) {
+
+			a = number% 10 ;
+			s = s * 10 + a;
+			number = parseInt(number/10);
+		}
+
+		console.log(s);	
+
+		// var answer = document.querySelector('.answer-m7').write(s);
+
+		document.getElementById('answer-m7').innerHTML = s;
+
+		return number;
+	}
+
+</script>
