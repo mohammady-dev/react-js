@@ -2,11 +2,15 @@
 
 
 <section>
-	Exercise 6
+	
 </section>
 
-<section>
-	<input class="input-t" type="text" onkeyup="mirrorNumber()">
+<section style="text-align: center;display: inline-block; width: 100%;">
+	<h1>Exercise 6</h1>
+	<br>
+	<br>
+	<br>
+	<input class="input-t" type="text" onkeyup="mirrorcharacters()">
 	<br>
 	<br>
 	<br>
@@ -20,33 +24,17 @@
 	
 			
 
-	function mirrorNumber(number){
+	function mirrorcharacters(word){
 
-		var number = document.querySelector('.input-t').value;
-		var number2 = number;
-		
+		var word = document.querySelector('.input-t').value.toString();
 
-		var a = 0;
-		var s = 0;
-
-		while (number>0) {
-
-			a = number% 10 ;
-			s = s * 10 + a;
-			number = parseInt(number/10);
-		}
+		const charSplited = word.split("").sort().join('');
 
 
-		document.getElementById('answer-m7').innerHTML = s;
+		document.getElementById('answer-m7').innerHTML = charSplited;
 
-		if(number2 == s){
-			console.log("true");
-		}
-		else{
-			console.log("false");
-		}
 
-		return number;
+		return word;
 	}
 
 

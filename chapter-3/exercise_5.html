@@ -1,17 +1,20 @@
 
 
 
-<section>
-	Exercise 5
-</section>
 
-<section>
+
+
+
+
+<section style="text-align: center;display: inline-block; width: 100%;">
+	<h1>Exercise 5</h1>
 	<input class="input-t" type="text" onkeyup="mirrorNumber()">
 	<br>
 	<br>
 	<br>
 	<h2>خروجی</h2>
 	<p id="answer-m7"></p>
+	<p id="answer2-m7"></p>
 </section>
 
 
@@ -40,16 +43,14 @@
 		document.getElementById('answer-m7').innerHTML = s;
 
 		if(number2 == s){
-			console.log("true");
+			document.getElementById('answer2-m7').innerHTML = "true";
 		}
 		else{
-			console.log("false");
+			document.getElementById('answer2-m7').innerHTML = "false";
 		}
 
 		return number;
 	}
-
-
 
 
 
