@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<section>
+  Exercise 4-3
+  <br>
+  A List
+</section>
+
+
+<script>
+
+  function arrayToList(arr) {
+    let list = null;
+    let n = arr.length - 1;
+    for(let i=n ; i>=0; i--){
+      list = {value: arr[i], rest: list};
+    }
+    return list;
+  }
+
+
+
+  function listToArray(list){
+      if (list){
+          let array = [];
+          array['value']=list.value;
+          if (list.rest){
+              array['rest'] = listToArray(list.rest);
+          }
+
+          return array;
+      }
+
+  }
+
+
+
+
+
+
+  function prepend(element, list) {
+    return {element , rest: list};
+  }
+
+
+  // console.log(arrayToList([1, 2, 3]));
+
+  let list = arrayToList([1, 2, 3]);
+
+  // console.log(ttt);
+
+  let aray = listToArray(ttt);
+  console.log(aray);
+
+  // console.log(prepend(1, prepend(2, null)));
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
