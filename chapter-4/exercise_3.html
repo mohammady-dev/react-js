@@ -21,13 +21,13 @@ function arrayToList(arr) {
 
 
 
-// function listToArray(list){
-// let array = []; 
-//   for(var key of Object.keys(list)){
-//     array[key]=list[key]  
-//   }
-//   return array;
-// }
+function listToArray(list) {
+  let array = [];
+  for (let node = list; node; node = node.rest) {
+    array.push(node.value);
+  }
+  return array;
+}
 
 
 
@@ -45,7 +45,7 @@ console.log(arrayToList([1, 2, 3]));
 console.log(prepend(1, prepend(2, null)));
 
 
-	
+  console.log(listToArray(arrayToList([1, 2, 3, 4 , 5])));
 	
 		
 </script>
